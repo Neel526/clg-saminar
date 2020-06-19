@@ -20,6 +20,7 @@ const adminLeftSide = () => {
             Create Categories
           </Link>
         </li>
+        
         <li className="list-group-item">
           <Link to="/admin/create/product" className="nav-link text-success">
             Create Product
@@ -61,7 +62,7 @@ return (
 <Base
   title="Welcome to admin area"
   description="Manage all of your products here"
-  className="container bg-success p-4"
+  className="container bg-white p-4"
 >
   <div className="row">
     <div className="col-3">{adminLeftSide()}</div>
