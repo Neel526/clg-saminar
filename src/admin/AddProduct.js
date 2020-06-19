@@ -64,7 +64,7 @@ const AddProduct = () => {
           description: "",
           price: "",
           photo: "",
-          stock: "",
+          // stock: "",
           loading: false,
           createdProduct: data.name
         });
@@ -89,18 +89,7 @@ const AddProduct = () => {
 
   const createProductForm = () => (
     <form>
-      <span>Post photo</span>
-      <div className="form-group">
-        <label className="btn btn-block btn-success">
-          <input
-            onChange={handleChange("photo")}
-            type="file"
-            name="photo"
-            accept="image"
-            placeholder="choose a file"
-          />
-        </label>
-      </div>
+     
       <div className="form-group">
         <input
           onChange={handleChange("name")}
@@ -143,7 +132,7 @@ const AddProduct = () => {
             ))}
         </select>
       </div>
-      <div className="form-group">
+      {/* <div className="form-group">
         <input
           onChange={handleChange("stock")}
           type="number"
@@ -151,6 +140,18 @@ const AddProduct = () => {
           placeholder="Stock"
           value={stock}
         />
+      </div> */}
+       <span>Post photo</span>
+      <div className="form-group">
+        <label className="btn btn-block btn-success">
+          <input
+            onChange={handleChange("photo")}
+            type="file"
+            name="photo"
+            accept="image"
+            placeholder="choose a file"
+          />
+        </label>
       </div>
 
       <button
@@ -167,12 +168,12 @@ const AddProduct = () => {
     <Base
       title="Add a product here!"
       description="Welcome to product creation section"
-      className="container bg-info p-4"
+      className="container-fluid bg-white p-4"
     >
       <Link to="/admin/dashboard" className="btn btn-md btn-dark mb-3">
         Admin Home
       </Link>
-      <div className="row bg-dark text-white rounded">
+      <div className="row bg-white text-white rounded">
         <div className="col-md-8 offset-md-2">
           {successMessage()}
           {createProductForm()}

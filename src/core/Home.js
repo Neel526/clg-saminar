@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <Base title="Home Page" description="Welcome to the Learnway Store">
       <div className="row text-center">
-        <h1 className="text-white">All of tshirts</h1>
+        <h1 className="">All Courses</h1>
         <div className="row">
           {products.map((product, index) => {
             return (

@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react';
 import {Link, withRouter} from "react-router-dom";
 import { signout, isAutheticated } from '../auth/helper';
-
+import "../styles.css";
 
 
 const currentTab = (history, path) => {

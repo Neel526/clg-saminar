@@ -92,7 +92,7 @@ const UpdateProduct = ({ match }) => {
             name: "",
             description: "",
             price: "",
-            photo: "",
+            // photo: "",
             stock: "",
             loading: false,
             createdProduct: data.name
@@ -119,18 +119,6 @@ const UpdateProduct = ({ match }) => {
 
   const createProductForm = () => (
     <form>
-      <span>Post photo</span>
-      <div className="form-group">
-        <label className="btn btn-block btn-success">
-          <input
-            onChange={handleChange("photo")}
-            type="file"
-            name="photo"
-            accept="image"
-            placeholder="choose a file"
-          />
-        </label>
-      </div>
       <div className="form-group">
         <input
           onChange={handleChange("name")}
@@ -173,7 +161,7 @@ const UpdateProduct = ({ match }) => {
             ))}
         </select>
       </div>
-      <div className="form-group">
+      {/* <div className="form-group">
         <input
           onChange={handleChange("stock")}
           type="number"
@@ -181,6 +169,19 @@ const UpdateProduct = ({ match }) => {
           placeholder="Stock"
           value={stock}
         />
+      </div> */}
+
+      <span>Post photo</span>
+      <div className="form-group">
+        <label className="btn btn-block btn-success">
+          <input
+            onChange={handleChange("photo")}
+            type="file"
+            name="photo"
+            accept="image"
+            placeholder="choose a file"
+          />
+        </label>
       </div>
 
       <button
@@ -197,12 +198,12 @@ const UpdateProduct = ({ match }) => {
     <Base
       title="Add a product here!"
       description="Welcome to product creation section"
-      className="container bg-info p-4"
+      className="container-fluid p-4"
     >
       <Link to="/admin/dashboard" className="btn btn-md btn-dark mb-3">
         Admin Home
       </Link>
-      <div className="row bg-dark text-white rounded">
+      <div className="row rounded">
         <div className="col-md-8 offset-md-2">
           {successMessage()}
           {createProductForm()}

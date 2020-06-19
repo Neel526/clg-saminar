@@ -8,9 +8,13 @@ body {
   background: #FFFFFF;
 }
 
-/*footer{
-  position: absolute;
+.nav-link{
+  cursor: pointer;
+}
+
+.footer{
+  position: relative;
   bottom: 0px;
   right: 0px;
   left: 0px;
-}*/
+}
